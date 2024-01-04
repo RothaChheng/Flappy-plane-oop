@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 466e13f704cee14498c0ef2f91b5149c
+guid: 746d7684babcdf7489fd02953d2cefc8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,7 +121,49 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: plane v3_0
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 28
+        width: 2178
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77bff46dadaf603439a7699f03fb7651
+      internalID: -1033437562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plane v3_1
+      rect:
+        serializedVersion: 2
+        x: 2274
+        y: 183
+        width: 55
+        height: 693
+      alignment: 9
+      pivot: {x: 0.6789462, y: 0.4776827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69bc5596ac5e5304db5c695cda8d620a
+      internalID: 1950912392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +174,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      plane v3_0: -1033437562
+      plane v3_1: 1950912392
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

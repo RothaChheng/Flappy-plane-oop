@@ -23,18 +23,17 @@ public class Birdscript : MonoBehaviour
         {
             myRigidbody.velocity = Vector2.up * flapstrength;
         }
+
+        // out of screen by ChhenG
+        if (transform.position.y > 19.9f || transform.position.y < -14.9f)
+        {
+            // Call a function to handle game over
+            logic.gameOver();
+            birdIsAlive = false;
+        }
     }
 
-    // Update is called once per frame 
-    /* void Update()
-     {
-         if(Input.GetKeyDown(KeyCode.Space) == true){
-             myRigidbody.velocity = Vector2.up * flapstrength;
-         }
-
-     }*/
-
-    // Add
+    // game over if plane hit pipe
     private void OnCollisionEnter2D (Collision2D collision)
     {
         logic.gameOver();
