@@ -14,10 +14,12 @@ public class AudioManger : MonoBehaviour
     [Header("------------Audio Source------------")]
     [SerializeField] AudioSource musicSrc;
     [SerializeField] AudioSource sfxSrc;
+    [SerializeField] AudioSource sfxSrcNoLoop;
 
     [Header("------------Audio clip------------")]
     public AudioClip background;
     public AudioClip flyingPlane;
+    public AudioClip wasted;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +41,8 @@ public class AudioManger : MonoBehaviour
         {
             musicSrc.Stop();
             sfxSrc.Stop();
+            sfxSrcNoLoop.clip = wasted;
+            sfxSrcNoLoop.Play();
         }
 
     }
