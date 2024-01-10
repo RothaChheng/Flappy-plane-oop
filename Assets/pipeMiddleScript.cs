@@ -5,6 +5,7 @@ using UnityEngine;
 public class pipeMiddleScript : MonoBehaviour
 {
     public Logicscript logic;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,9 @@ public class pipeMiddleScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        logic.addScore();
+        if (collision.gameObject.layer == 3)
+        {
+            logic.addScore(1);
+        }
     }
 }
