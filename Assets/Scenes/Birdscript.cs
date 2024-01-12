@@ -10,6 +10,7 @@ public class Birdscript : MonoBehaviour
     // Add 
     public Logicscript logic;
     public bool birdIsAlive = true;
+
     // Start is called before the first frame update
     void Start()
     {
