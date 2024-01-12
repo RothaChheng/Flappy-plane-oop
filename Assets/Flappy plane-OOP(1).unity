@@ -231,7 +231,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5403dfe67cb5734da972f6f8a528866, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerScore: 0
   scoreText: {fileID: 26235122}
   gameOverScreen: {fileID: 142858819}
 --- !u!4 &126519816

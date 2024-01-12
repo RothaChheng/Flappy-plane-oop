@@ -8,13 +8,12 @@ using UnityEngine.SceneManagement;
 
 public class Logicscript : MonoBehaviour
 {
-    public int playerScore;
+    int playerScore = 0;
     public Text scoreText;
     public GameObject gameOverScreen;
 
     void Start()
     {
-        
 
     }
 
@@ -36,11 +35,11 @@ public class Logicscript : MonoBehaviour
         gameOverScreen.SetActive(true);
     }
 
-    public void addScore(int addToScore)
+    public void addScore()
     {
         if (!isGameOver())
-            { 
-            playerScore += addToScore;
+            {
+            playerScore = playerScore + 1;
         scoreText.text = playerScore.ToString();
         }
 
