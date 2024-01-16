@@ -9,8 +9,10 @@ using UnityEngine.SceneManagement;
 public class Logicscript : MonoBehaviour
 {
     int playerScore = 0;
+    int bestScore;
     public Text scoreText;
     public GameObject gameOverScreen;
+    public string gameScene;
 
     void Start()
     {
@@ -29,10 +31,11 @@ public class Logicscript : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    // activate gameover screen
+    // activate gameover screen // bestscore scene
+
     public void gameOver()
     {
-        gameOverScreen.SetActive(true);
+            gameOverScreen.SetActive(true);  
     }
 
     public void addScore()
@@ -41,6 +44,24 @@ public class Logicscript : MonoBehaviour
             {
             playerScore = playerScore + 1;
         scoreText.text = playerScore.ToString();
+        }
+        PlayerPrefs.SetInt("HighScore", playerScore);
+
+    }
+
+    public void bestScoreScene()
+    {
+            SceneManager.LoadScene(gameScene);
+    }
+
+    public void gameOverOrBestScore()
+    {
+        if (playerScore > PlayerPrefs.GetInt("HighScore", 0))
+        {
+            bestScoreScene();
+        } else
+        {
+            gameOver();
         }
 
     }

@@ -233,6 +233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 26235122}
   gameOverScreen: {fileID: 142858819}
+  gameScene: bestScore
 --- !u!4 &126519816
 Transform:
   m_ObjectHideFlags: 0

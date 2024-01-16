@@ -37,7 +37,8 @@ public class Birdscript : MonoBehaviour
     // game over if plane hit pipe
     private void OnCollisionEnter2D (Collision2D collision)
     {
-        logic.gameOver();
+        logic.gameOverOrBestScore();
         birdIsAlive = false;
+        
     }
 }

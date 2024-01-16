@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ScenceManagerScript : MonoBehaviour
 {
-    public string sceneName;
+    public string gameplay;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +19,7 @@ public class ScenceManagerScript : MonoBehaviour
     }
     public void playGame1()
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(gameplay);
     }
     public void QuitGame()
     {
