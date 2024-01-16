@@ -53,35 +53,16 @@ public class Logicscript : MonoBehaviour
             scoreText.text = playerScore.ToString();
 
         }
-        PlayerPrefs.SetInt("HighScore", playerScore);
 
-    }
-
-    public void bestScoreScene()
-    {
-            SceneManager.LoadScene(gameScene);
-    }
-
-    public void gameOverOrBestScore()
-    {
-        if (playerScore > PlayerPrefs.GetInt("HighScore", 0))
-        {
-            bestScoreScene();
-        } else
-        {
-            gameOver();
-        }
-
-
-        if (playerScore > PlayerPrefs.GetInt("HighScore", 0))
+        if (playerScore > PlayerPrefs.GetInt("HighScore",0))
         {
             PlayerPrefs.SetInt("HighScore", playerScore);
             highScoreText.text = playerScore.ToString();
         }
 
-
-
     }
+
+    
 
 
     public void bestScoreScene()
