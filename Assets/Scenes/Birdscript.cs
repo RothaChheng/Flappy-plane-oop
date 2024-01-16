@@ -29,7 +29,7 @@ public class Birdscript : MonoBehaviour
         if (transform.position.y > 19.9f || transform.position.y < -14.9f)
         {
             // Call a function to handle game over
-            logic.gameOver();
+            logic.gameOverOrBestScore();
             birdIsAlive = false;
         }
     }
