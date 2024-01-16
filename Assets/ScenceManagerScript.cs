@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class ScenceManagerScript : MonoBehaviour
 {
     public string gameplay;
+    public GameObject aboutScreen;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,5 +25,10 @@ public class ScenceManagerScript : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void aboutScreenPop()
+    {
+        aboutScreen.SetActive(true);
     }
 }
