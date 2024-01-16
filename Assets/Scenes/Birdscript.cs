@@ -29,7 +29,7 @@ public class Birdscript : MonoBehaviour
         if (transform.position.y > 19.9f || transform.position.y < -14.9f)
         {
             // Call a function to handle game over
-            logic.gameOver();
+            logic.gameOverOrBestScore();
             birdIsAlive = false;
         }
     }
@@ -37,7 +37,8 @@ public class Birdscript : MonoBehaviour
     // game over if plane hit pipe
     private void OnCollisionEnter2D (Collision2D collision)
     {
-        logic.gameOver();
+        // logic.gameOver();
+        logic.gameOverOrBestScore();
         birdIsAlive = false;
     }
 }
