@@ -6368,6 +6368,7 @@ MonoBehaviour:
   background: {fileID: 8300000, guid: adb03b3c6a36335409b112e9309192fb, type: 3}
   flyingPlane: {fileID: 8300000, guid: b35d320b27f0f3146b933696ac216fa5, type: 3}
   wasted: {fileID: 8300000, guid: 46ba8801b9075c74e81687047162e77f, type: 3}
+  click: {fileID: 8300000, guid: 5d4b8088cbc361c4f9a4313961953720, type: 3}
 --- !u!81 &1653884298
 AudioListener:
   m_ObjectHideFlags: 0
@@ -7265,6 +7266,18 @@ MonoBehaviour:
       - m_Target: {fileID: 126519815}
         m_TargetAssemblyTypeName: Logicscript, Assembly-CSharp
         m_MethodName: restartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1653884297}
+        m_TargetAssemblyTypeName: AudioManger, Assembly-CSharp
+        m_MethodName: buttonClick1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

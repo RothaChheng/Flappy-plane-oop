@@ -20,6 +20,7 @@ public class AudioManger : MonoBehaviour
     public AudioClip background;
     public AudioClip flyingPlane;
     public AudioClip wasted;
+    public AudioClip click;
 
     // Start is called before the first frame update
     void Start()
@@ -45,5 +46,10 @@ public class AudioManger : MonoBehaviour
             sfxSrcNoLoop.Play();
         }
 
+    }
+    public void buttonClick1()
+    {
+        sfxSrc.clip = click;
+        sfxSrc.Play();
     }
 }
