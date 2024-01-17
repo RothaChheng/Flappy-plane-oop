@@ -8,7 +8,7 @@ public class pause : MonoBehaviour
 {
     public GameObject pauseMenu; // Reference to the pause menu UI game object
     public static bool isPaused; // Flag to track if the game is paused or not
-
+    public string sceneName;
     // Start is called before the first frame update
     void Start()
     {
@@ -50,6 +50,11 @@ public class pause : MonoBehaviour
         isPaused = false; // Sets the isPaused flag to false
     }
 
-    
-    
+    // back to menu 
+    public void backToMenu()
+    {
+        SceneManager.LoadScene(sceneName);
+
+    }
+
 }
