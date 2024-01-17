@@ -6365,7 +6365,7 @@ MonoBehaviour:
   musicSrc: {fileID: 523852372}
   sfxSrc: {fileID: 600155205}
   sfxSrcNoLoop: {fileID: 1317522999}
-  background: {fileID: 8300000, guid: ba36d37600409b04691bbc334160923b, type: 3}
+  background: {fileID: 8300000, guid: adb03b3c6a36335409b112e9309192fb, type: 3}
   flyingPlane: {fileID: 8300000, guid: b35d320b27f0f3146b933696ac216fa5, type: 3}
   wasted: {fileID: 8300000, guid: 46ba8801b9075c74e81687047162e77f, type: 3}
 --- !u!81 &1653884298
