@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms;
 
 
 
@@ -21,6 +22,15 @@ public class Logicscript : MonoBehaviour
     {
         highScoreText.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
         highScore = PlayerPrefs.GetInt("HighScore", 0);
+    }
+
+    void Update()
+    {
+        // Check for the "R" key press to reset the high score
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            PlayerPrefs.DeleteKey("HighScore");
+        }
     }
 
     [ContextMenu("Increase Score")]
@@ -82,14 +92,7 @@ public class Logicscript : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        // Check for the "R" key press to reset the high score
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            PlayerPrefs.DeleteKey("HighScore");
-        }
-    }
+  
 
 }
 
