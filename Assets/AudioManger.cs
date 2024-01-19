@@ -9,6 +9,8 @@ public class AudioManger : MonoBehaviour
 
 {
     public Birdscript bird;
+    public pause pause1; // add audio 
+   
 
 
     [Header("------------Audio Source------------")]
@@ -26,6 +28,7 @@ public class AudioManger : MonoBehaviour
     void Start()
     {
         bird = GameObject.FindGameObjectWithTag("Bird").GetComponent<Birdscript>();
+        pause1 = GameObject.FindGameObjectWithTag("Audio").GetComponent<pause>();
 
         
             musicSrc.clip = background;
@@ -40,16 +43,28 @@ public class AudioManger : MonoBehaviour
     {
         if (bird.birdIsAlive == false && musicSrc.isPlaying && sfxSrc.isPlaying)
         {
-            musicSrc.Stop();
-            sfxSrc.Stop();
+            PauseAudio();
             sfxSrcNoLoop.clip = wasted;
             sfxSrcNoLoop.Play();
         }
-
     }
+
     public void buttonClick1()
     {
-        sfxSrc.clip = click;
-        sfxSrc.Play();
+        sfxSrcNoLoop.clip = click;
+        sfxSrcNoLoop.Play();
     }
+
+    public void PauseAudio()
+    {
+            musicSrc.Pause();
+            sfxSrc.Pause();
+    }
+
+    public void ResumeAudio()
+    {
+        musicSrc.UnPause();
+        sfxSrc.UnPause();
+    }
+
 }

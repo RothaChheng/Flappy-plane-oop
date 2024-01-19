@@ -72,9 +72,6 @@ public class Logicscript : MonoBehaviour
 
     }
 
-    
-
-
     public void bestScoreScene()
     {
         SceneManager.LoadScene(SceneName);
@@ -91,9 +88,7 @@ public class Logicscript : MonoBehaviour
             gameOver();
         }
     }
-
   
-
 }
 
 

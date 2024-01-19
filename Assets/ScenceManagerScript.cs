@@ -10,8 +10,8 @@ public class ScenceManagerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-    }  
+
+    }
 
     // Update is called once per frame
     void Update()
@@ -21,6 +21,7 @@ public class ScenceManagerScript : MonoBehaviour
     public void playGame1()
     {
         SceneManager.LoadScene(gameplay);
+        Time.timeScale = 1f;
     }
     public void QuitGame()
     {

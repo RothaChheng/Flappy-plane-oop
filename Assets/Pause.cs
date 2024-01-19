@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting; // Importing necessary libraries for using Unity's Visual Scripting API
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,10 +10,13 @@ public class pause : MonoBehaviour
     public GameObject pauseMenu; // Reference to the pause menu UI game object
     public static bool isPaused; // Flag to track if the game is paused or not
     public string sceneName;
+    public AudioManger audio1; // call Audio Manager
     // Start is called before the first frame update
     void Start()
     {
         pauseMenu.SetActive(false); // Deactivates the pause menu UI at the start
+        audio1 = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManger>();
+
     }
 
     // Update is called once per frame
@@ -39,6 +43,7 @@ public class pause : MonoBehaviour
         pauseMenu.SetActive(true); // Sets the pause menu UI to be active
         Time.timeScale = 0f; // Freezes the in-game time to 0, effectively pausing the game
         isPaused = true; // Sets the isPaused flag to true
+        audio1.PauseAudio();
     }
 
     // Resumes the game
@@ -48,6 +53,7 @@ public class pause : MonoBehaviour
         pauseMenu.SetActive(false); // Deactivates the pause menu UI
         Time.timeScale = 1f; // Restores the in-game time to normal, resuming the game
         isPaused = false; // Sets the isPaused flag to false
+        audio1.ResumeAudio();
     }
 
     // back to menu 

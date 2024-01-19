@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Birdscript : MonoBehaviour
 {
@@ -39,6 +40,6 @@ public class Birdscript : MonoBehaviour
     {
         logic.gameOverOrBestScore();
         birdIsAlive = false;
-        
+
     }
 }
