@@ -9,7 +9,6 @@ public class AudioManger : MonoBehaviour
 
 {
     public Birdscript bird;
-    public pause pause1; // add audio 
    
 
 
@@ -28,7 +27,6 @@ public class AudioManger : MonoBehaviour
     void Start()
     {
         bird = GameObject.FindGameObjectWithTag("Bird").GetComponent<Birdscript>();
-        pause1 = GameObject.FindGameObjectWithTag("Audio").GetComponent<pause>();
 
         
             musicSrc.clip = background;

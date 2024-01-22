@@ -21,7 +21,7 @@ public class ScenceManagerScript : MonoBehaviour
     public void playGame1()
     {
         SceneManager.LoadScene(gameplay);
-        Time.timeScale = 1f;
+        Time.timeScale = 1f;// Restores the in-game time to normal, resuming the game
     }
     public void QuitGame()
     {

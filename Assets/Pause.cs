@@ -11,11 +11,13 @@ public class pause : MonoBehaviour
     public static bool isPaused; // Flag to track if the game is paused or not
     public string sceneName;
     public AudioManger audio1; // call Audio Manager
-    // Start is called before the first frame update
+    public Birdscript bird; // call birdScript
+
     void Start()
     {
         pauseMenu.SetActive(false); // Deactivates the pause menu UI at the start
         audio1 = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManger>();
+        bird = GameObject.FindGameObjectWithTag("Bird").GetComponent<Birdscript>();
 
     }
 
@@ -23,7 +25,7 @@ public class pause : MonoBehaviour
     void Update()
     {
         // Checks for the Esc key input to handle the game pause/resume logic
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && bird.birdIsAlive)
         {
             if (isPaused)
             {
